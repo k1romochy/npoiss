@@ -9,22 +9,23 @@
     <style>
         body { font-family: 'Montserrat', sans-serif; color: #ffffff; scroll-behavior: smooth; }
         
-        /* ГЛОБАЛЬНЫЙ ФОН ИЗ ХМЕЛЯ: темный и стилизованный */
+        /* ГЛОБАЛЬНЫЙ ФОН ИЗ ХМЕЛЯ: Использует твой локальный файл hmel.jpg */
         .page-hops-bg {
             background-color: #0b0b0b;
             background-image: 
-                linear-gradient(rgba(11, 11, 11, 0.95), rgba(11, 11, 11, 0.95)),
-                url('https://images.unsplash.com/photo-1596700547072-690a2be7a87e?auto=format&fit=crop&w=1920&q=80');
+                /* Оверлей немного светлее (0.90 вместо 0.95), чтобы текстура была видна */
+                linear-gradient(rgba(11, 11, 11, 0.90), rgba(11, 11, 11, 0.90)),
+                url('hmel.jpg'); 
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
 
-        /* Заменяем все зеленые классы на белый */
-        .text-green-hops { color: #ffffff !important; }
-        .bg-green-hops { background-color: #ffffff; }
+        /* Белая типографика */
+        .text-white-hops { color: #ffffff !important; }
+        .bg-white-hops { background-color: #ffffff; }
 
-        /* HERO ГРАДИЕНТ (легкое затемнение поверх общего фона) */
+        /* HERO ГРАДИЕНТ */
         .hero-section {
             background: linear-gradient(rgba(11, 11, 11, 0.2), rgba(11, 11, 11, 0.5));
         }
