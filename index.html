@@ -3,137 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>НПО ИСС | Интеллектуальные Системы Сушки | Agro-Wave Lab</title>
-    
+    <title>НПО ИСС | Интеллектуальные системы сушки</title>
     <link rel="icon" type="image/png" href="logo.png">
-    
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Montserrat', sans-serif; color: #ffffff; scroll-behavior: smooth; }
-        
-        /* ГЛОБАЛЬНЫЙ ФОН ИЗ ХМЕЛЯ: Использует твой локальный файл hmel.jpg */
-        .page-hops-bg {
-            background-color: #0b0b0b;
-            background-image: 
-                /* ОВЕРЛЕЙ: Уменьшили затемнение (0.75 вместо 0.90), чтобы хмель стал ярче */
-                linear-gradient(rgba(11, 11, 11, 0.75), rgba(11, 11, 11, 0.75)),
-                url('hmel.jpg'); 
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed; /* Эффект параллакса */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: #1a1a1a;
+            color: #fff;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
         }
 
-        /* HERO ГРАДИЕНТ для дополнительного затемнения вверху */
-        .hero-section {
-            background: linear-gradient(rgba(11, 11, 11, 0.1), rgba(11, 11, 11, 0.4));
+        .hero {
+            width: 100%;
+            display: block;
         }
-        
-        /* Плавное появление элементов */
-        .fade-in { animation: fadeIn 0.8s ease-in forwards; opacity: 0; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .contacts {
+            padding: 2.5rem 1.5rem 3rem;
+            text-align: center;
+            background: #111;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .contacts h2 {
+            font-size: 0.75rem;
+            font-weight: 500;
+            letter-spacing: 0.35em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.45);
+            margin-bottom: 1.25rem;
+        }
+
+        .contacts a {
+            display: inline-block;
+            color: #fff;
+            text-decoration: none;
+            font-size: clamp(1.25rem, 4vw, 1.75rem);
+            font-weight: 400;
+            transition: color 0.2s ease;
+        }
+
+        .contacts a:hover {
+            color: #76B82A;
+        }
+
+        .contacts .copy {
+            margin-top: 1.75rem;
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.3);
+        }
     </style>
 </head>
-<body class="page-hops-bg antialiased">
+<body>
+    <img
+        class="hero"
+        src="hero.png"
+        alt="НПО ИСС — интеллектуальные системы сушки"
+    >
 
-    <header class="p-6 flex justify-between items-center max-w-7xl mx-auto fade-in">
-        <div class="flex items-center space-x-5">
-            <img src="logo.png" 
-                 alt="НПО ИСС Лого" 
-                 class="h-16 md:h-24 w-auto object-contain flex-shrink-0"
-                 onerror="this.style.display='none'">
-            <div class="flex flex-col border-l-2 border-white/50 pl-5 py-1">
-                <span class="font-bold text-2xl md:text-3xl tracking-tighter uppercase leading-none text-white">НПО ИСС</span>
-                <span class="text-[10px] md:text-xs text-gray-400 tracking-[0.3em] uppercase mt-1">Agro-Wave Technologies</span>
-            </div>
-        </div>
-        <div class="hidden md:block">
-            <a href="mailto:ceo@npoiss.ru" class="border border-white/30 px-8 py-3 rounded-full hover:bg-white hover:text-black transition-all font-medium text-sm">Связаться</a>
-        </div>
-    </header>
-
-    <section class="hero-section min-h-[85vh] flex items-center justify-center text-center px-4 fade-in">
-        <div class="max-w-5xl">
-            <h1 class="text-4xl md:text-8xl font-bold mb-8 leading-[1.1] tracking-tight text-white">
-                НПО Интеллектуальные <br> системы сушки
-            </h1>
-            <p class="text-xl md:text-3xl font-light text-gray-300 mb-12 italic tracking-wide">
-                «Бережная сушка на сверхвысоких скоростях»
-            </p>
-            <div class="flex flex-col md:flex-row gap-5 justify-center">
-                <a href="#about" class="bg-white hover:bg-gray-200 text-black px-12 py-5 rounded-xl font-bold text-lg transition-all transform hover:scale-105 shadow-2xl">
-                    Узнать больше
-                </a>
-                <a href="mailto:ceo@npoiss.ru" class="bg-white/10 backdrop-blur-md border border-white/10 hover:bg-white/20 text-white px-12 py-5 rounded-xl font-bold text-lg transition-all">
-                    Получить презентацию
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="py-32 px-6 max-w-7xl mx-auto fade-in">
-        <div class="grid lg:grid-cols-2 gap-20 items-center">
-            
-            <div class="space-y-12 flex flex-col items-start">
-                
-                <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10 hover:border-white/30 transition-all">
-                    <img src="agrowavecontainer.jpg" 
-                         alt="Мобильный комплекс Agro-Wave Lab" 
-                         class="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-500"
-                         loading="lazy">
-                </div>
-                
-                <div class="space-y-6">
-                    <h2 class="text-4xl font-bold border-l-8 border-white pl-8 uppercase tracking-widest text-white">О проекте</h2>
-                    <p class="text-gray-300 text-xl leading-relaxed">
-                        Мы разрабатываем инновационные мобильные комплексы <strong class="text-white font-semibold">Agro-Wave</strong>. Наши решения создаются на стыке фундаментальной науки и современных IT-технологий.
-                    </p>
-                    <p class="text-gray-300 text-xl leading-relaxed">
-                        В основе лежат разработки ведущих аграрных ВУЗов. Сейчас мы переходим к этапу промышленной сборки флагманской модели <strong class="text-white font-semibold">«Agro-Wave Lab»</strong>.
-                    </p>
-                </div>
-            </div>
-            
-            <div class="grid grid-cols-1 gap-6">
-                <div class="bg-white/5 p-10 rounded-3xl border border-white/10 flex items-center space-x-6 hover:border-white/40 hover:bg-white/10 transition-all">
-                    <div class="text-white text-6xl font-bold">15x</div>
-                    <div>
-                        <h4 class="text-xl font-bold text-white uppercase tracking-wider">Скорость</h4>
-                        <p class="text-gray-500 mt-1">Кратное ускорение процесса сушки</p>
-                    </div>
-                </div>
-                <div class="bg-white/5 p-10 rounded-3xl border border-white/10 flex items-center space-x-6 hover:border-white/40 hover:bg-white/10 transition-all">
-                    <div class="text-white text-6xl font-bold">98%</div>
-                    <div>
-                        <h4 class="text-xl font-bold text-white uppercase tracking-wider">Качество</h4>
-                        <p class="text-gray-500 mt-1">Максимальное сохранение нутриентов</p>
-                    </div>
-                </div>
-                <div class="bg-white/5 p-10 rounded-3xl border border-white/10 flex items-center space-x-6 hover:border-white/40 hover:bg-white/10 transition-all">
-                    <div class="text-white text-6xl font-bold">40%</div>
-                    <div>
-                        <h4 class="text-xl font-bold text-white uppercase tracking-wider">Энергия</h4>
-                        <p class="text-gray-500 mt-1">Снижение затрат на эксплуатацию</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer class="py-16 border-t border-white/5 text-center bg-black/50 fade-in">
-        <div class="max-w-7xl mx-auto px-6">
-            <p class="text-gray-600 mb-6 tracking-widest uppercase text-sm">© 2026 НПО «Интеллектуальные системы сушки»</p>
-            <a href="mailto:ceo@npoiss.ru" class="text-2xl md:text-3xl text-white hover:text-gray-400 transition-colors font-light">ceo@npoiss.ru</a>
-            <div class="mt-10 flex justify-center space-x-8 text-xs text-gray-700 uppercase tracking-[0.5em]">
-                <span>Innovation</span>
-                <span>•</span>
-                <span>Science</span>
-                <span>•</span>
-                <span>Efficiency</span>
-            </div>
-        </div>
+    <footer class="contacts">
+        <h2>Контакты</h2>
+        <a href="mailto:ceo@npoiss.ru">ceo@npoiss.ru</a>
+        <p class="copy">© 2026 НПО «Интеллектуальные системы сушки»</p>
     </footer>
-
 </body>
 </html>
